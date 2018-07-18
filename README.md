@@ -2,7 +2,7 @@
 ChromeGo 翻墙工具包
 
 <b>下载本项目</b>
-<img src="/killgcd/chromego/blob/master/%E4%B8%8B%E8%BD%BDchromego.jpg?raw=true" alt="下载chromego.jpg">
+<img src="https://github.com/killgcd/chromego/blob/master/%E4%B8%8B%E8%BD%BDchromego.jpg?raw=true" alt="下载chromego.jpg">
 
 <b>使用本软件</b>
 请首先自行安装Google Chrome 浏览器，然后下载本软件，本软件会自动调用Google Chrome 浏览器翻墙。

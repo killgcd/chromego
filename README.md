@@ -1,7 +1,7 @@
 # chromego
 ChromeGo 翻墙工具包
 
-<b>下载本项目</b>
+<b>下载本项目</b><br>
 <img src="https://github.com/killgcd/chromego/blob/master/%E4%B8%8B%E8%BD%BDchromego.jpg?raw=true" alt="下载chromego.jpg">
 
 <b>使用本软件</b>

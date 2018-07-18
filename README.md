@@ -1,5 +1,13 @@
 # chromego
 ChromeGo 翻墙工具包
 
-使用说明：
-https://git.io/fanqiang
+<b>下载本项目</b>
+<img src="/killgcd/chromego/blob/master/%E4%B8%8B%E8%BD%BDchromego.jpg?raw=true" alt="下载chromego.jpg">
+
+<b>使用本软件</b>
+请首先自行安装Google Chrome 浏览器，然后下载本软件，本软件会自动调用Google Chrome 浏览器翻墙。
+下载本项目后，解压出来，请不要解压到含有中文或空格的目录路径，请不要不解压就直接从压缩包里运行！不解压会出错！ 
+然后运行  <b>0.xx-10.xx翻墙</b> 一次尝试。
+
+<b>版权声明</b>
+请随意分发，勿做商业使用。

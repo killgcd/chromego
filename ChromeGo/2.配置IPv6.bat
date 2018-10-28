@@ -23,7 +23,7 @@ if '%ERRORLEVEL%' neq '0' (
     cd /d "%~dp0"
 :--------------------------------------
 
-:: 判断输入参数
+REM 判断输入参数
 if /i `%1` == `enableIPv6` Goto EnableIPv6
 if /i `%1` == `disableIPv6` Goto DisableIPv6
 
@@ -38,9 +38,17 @@ cls
 echo 标题:「 %tle% 」
 echo ---------------------------------------
 echo 菜单:
-echo       ①  手动设置 Teredo 服务器
+echo       ⑴  启用 IPv6  √
 echo.
-echo       ②  查看 Teredo 隧道状态
+echo       ⑵  禁用 IPv6  メ
+echo.
+echo       ⑶  查看 Teredo 隧道状态
+echo.
+echo       ⑷  手动设置 Teredo 服务器
+echo.
+echo       ⑸  自动设置 Teredo 服务器
+echo.
+echo       ⑹  电脑休眠 -^> IPv6 Fail 处理
 echo.
 echo       Ｑ  退出
 echo.
@@ -51,12 +59,86 @@ Set /p choice=选择:
 Set "choice=%choice:"=%"
 if "%choice:~-1%"=="=" Goto Menu
 if "%choice%"=="" Goto Menu
-if /i "%choice%" == "1" cls&Goto ManuTeredo
-if /i "%choice%" == "2" cls&Goto ShowState
+if /i "%choice%" == "1" cls&Goto EnableIPv6
+if /i "%choice%" == "2" cls&Goto DisableIPv6
+if /i "%choice%" == "3" cls&Goto ShowState
+if /i "%choice%" == "4" cls&Goto ManuTeredo
+if /i "%choice%" == "5" cls&Goto AutoTeredo
+if /i "%choice%" == "6" cls&Goto Ipv6FailProc
+if /i "%choice%" == "r" cls&Goto RestTeredo
 if /i "%choice%" == "q" Popd&Exit
 Set var=1
 Goto Menu
 
+:EnableIPv6
+echo 正在启用 IPv6，请稍后。。。
+MODE con: Cols=88 Lines=32
+sc config RpcEptMapper start= auto
+sc start RpcEptMapper
+sc config DcomLaunch start= auto
+sc start DcomLaunch
+sc config RpcSs start= auto
+sc start RpcSs
+sc config nsi start= auto
+sc start nsi
+sc config Winmgmt start= auto
+sc start Winmgmt
+sc config Dhcp start= auto
+sc start Dhcp
+sc config WinHttpAutoProxySvc start= auto
+sc start WinHttpAutoProxySvc
+sc config iphlpsvc start= auto
+sc start iphlpsvc
+
+netsh int ipv6 reset
+netsh int teredo set state default
+netsh int 6to4 set state default
+netsh int isatap set state default
+:: netsh int teredo set state server=teredo.remlab.net.
+netsh int teredo set state server=win10.ipv6.microsoft.com.
+netsh int ipv6 set teredo enterpriseclient
+netsh int ter set state enterpriseclient
+route delete ::/0
+netsh int ipv6 add route ::/0 "Teredo Tunneling Pseudo-Interface"
+netsh int ipv6 set prefix 2002::/16 30 1
+netsh int ipv6 set prefix 2001::/32 5 1
+
+reg add HKLM\SYSTEM\CurrentControlSet\services\Dnscache\Parameters /v AddrConfigControl /t REG_DWORD /d 0 /f
+reg add HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters /v DisabledComponents /t REG_DWORD /d 0 /f
+
+netsh int teredo set state default
+netsh int 6to4 set state default
+netsh int isatap set state default
+:: netsh int teredo set state server=teredo.remlab.net.
+netsh int teredo set state server=win10.ipv6.microsoft.com.
+netsh int ipv6 set teredo enterpriseclient
+netsh int ter set state enterpriseclient
+route delete ::/0
+netsh int ipv6 add route ::/0 "Teredo Tunneling Pseudo-Interface"
+netsh int ipv6 set prefix 2002::/16 30 1
+netsh int ipv6 set prefix 2001::/32 5 1
+reg add HKLM\SYSTEM\CurrentControlSet\services\Dnscache\Parameters /v AddrConfigControl /t REG_DWORD /d 0 /f
+
+ipconfig /flushdns
+
+:: >%TEMP%\ipv6-state.txt ipconfig /all
+:: >>%TEMP%\ipv6-state.txt netsh int ipv6 show teredo
+:: >>%TEMP%\ipv6-state.txt netsh int ipv6 show route
+:: >>%TEMP%\ipv6-state.txt netsh int ipv6 show int
+:: >>%TEMP%\ipv6-state.txt netsh int ipv6 show prefix
+:: >>%TEMP%\ipv6-state.txt netsh int ipv6 show address
+:: >>%TEMP%\ipv6-state.txt route print
+:: @start "" notepad.exe %TEMP%\ipv6-state.txt
+:: if exist %WINDIR%\System32\choice.exe (choice /t 2 /d y /n >nul) else (ping 127.1 -n 5 >nul)
+:: del /q %TEMP%\ipv6-state.txt 1>nul 2>nul
+Goto End
+
+:DisableIPv6
+echo 正在禁用 IPv6，请稍后。。。
+netsh interface teredo set state disable 1>nul 2>nul
+netsh interface 6to4 set state disabled 1>nul 2>nul
+netsh interface isatap set state disabled 1>nul 2>nul
+Goto End
 
 :ShowState
 Color 3e
@@ -67,50 +149,64 @@ Goto End
 
 :ManuTeredo
 Color 3f
-MODE con: Cols=40 Lines=27
+MODE con: Cols=45 Lines=27
+:: MODE con: Cols=45 Lines=41
 Set tle2=手动设置 Teredo 服务器
 Set var2=0
-Set manu1=win10.ipv6.microsoft.com.
-Set manu2=teredo2.remlab.net.
-Set manu3=win1710.ipv6.microsoft.com.
-Set manu4=teredo-debian.remlab.net.
-Set manu5=teredo.ginzado.ne.jp.
-Set manu6=teredo.iks-jena.de.
-Set manu7=teredo.ngix.ne.kr.
-Set manu8=teredo.autotrans.consulintel.com.
-Set manu9=teredo.managemydedi.com.
-Set manu10=teredo.trex.fi.
-Set manu11=debian-miredo.progsoc.org.
+Set manu1=teredo.remlab.net
+Set manu2=teredo2.remlab.net
+Set manu3=teredo-debian.remlab.net
+Set manu4=teredo.trex.fi
+Set manu5=teredo.iks-jena.de
+Set manu6=win10.ipv6.microsoft.com
+Set manu7=win1710.ipv6.microsoft.com
+Set manu8=win1711.ipv6.microsoft.com
+:: Set manu9=teredo.ginzado.ne.jp
+:: Set manu10=debian-miredo.progsoc.org
+:: Set manu11=teredo.autotrans.consulintel.com
+:: Set manu12=teredo.ngix.ne.kr
+:: Set manu13=teredo.managemydedi.com
+:: Set manu14=teredo.ipv6.microsoft.com
+:: Set manu15=win8.ipv6.microsoft.com
+
 :Menu2
 cls
 echo 标题:「 %tle2% 」
-echo ---------------------------------------
+echo --------------------------------------------
 echo 菜单:
-echo       ①  %manu1%
+echo       ⑴  %manu1%
 echo.
-echo       ②  %manu2%
+echo       ⑵  %manu2%
 echo.
-echo       ③  %manu3%
+echo       ⑶  %manu3%
 echo.
-echo       ④  %manu4%
+echo       ⑷  %manu4%
 echo.
-echo       ⑤  %manu5%
+echo       ⑸  %manu5%
 echo.
-echo       ⑥  %manu6%
+echo       ⑹  %manu6%
 echo.
-echo       ⑦  %manu7%
+echo       ⑺  %manu7%
 echo.
-echo       ⑧  %manu8%
+echo       ⑻  %manu8%
 echo.
-echo       ⑨  %manu9%
-echo.
-echo       ⑩  %manu10%
-echo.
-echo       11 %manu11% 
-echo.
+:: echo       ⑼  %manu9%
+:: echo.
+:: echo       ⑽  %manu10%
+:: echo.
+:: echo       ⑾  %manu11%
+:: echo.
+:: echo       ⑿  %manu12%
+:: echo.
+:: echo       ⒀  %manu13%
+:: echo.
+:: echo       ⒁  %manu14%
+:: echo.
+:: echo       ⒂  %manu15%
+:: echo.
 echo       Ｂ  返回主菜单
 echo.
-echo ---------------------------------------
+echo --------------------------------------------
 if %var2% neq 0 echo (输入无效请重新输入)
 Set choice2=
 Set /p choice2=选择: 
@@ -125,17 +221,65 @@ if /i "%choice2%" == "5" cls&Goto TeredoSet
 if /i "%choice2%" == "6" cls&Goto TeredoSet
 if /i "%choice2%" == "7" cls&Goto TeredoSet
 if /i "%choice2%" == "8" cls&Goto TeredoSet
-if /i "%choice2%" == "9" cls&Goto TeredoSet
-if /i "%choice2%" == "10" cls&Goto TeredoSet
-if /i "%choice2%" == "11" cls&Goto TeredoSet
+:: if /i "%choice2%" == "9" cls&Goto TeredoSet
+:: if /i "%choice2%" == "10" cls&Goto TeredoSet
+:: if /i "%choice2%" == "11" cls&Goto TeredoSet
+:: if /i "%choice2%" == "12" cls&Goto TeredoSet
+:: if /i "%choice2%" == "13" cls&Goto TeredoSet
+:: if /i "%choice2%" == "14" cls&Goto TeredoSet
+:: if /i "%choice2%" == "15" cls&Goto TeredoSet
 if /i "%choice2%" == "b" cls&Goto Start
 if /i "%choice2%" == "q" Popd&Exit
 Set var2=1
 Goto Menu2
 :TeredoSet
 setlocal enabledelayedexpansion
-netsh interface teredo set state server=!manu%choice2%!
+netsh interface teredo set state server=!manu%choice2%!.
 endlocal
+Goto End
+
+:AutoTeredo
+Title 正在自动设置 Teredo 服务器，请稍后。。。
+MODE con: Cols=88 Lines=32
+REM 指定待搜索的文件
+Set "fileName=python.exe"
+for /r code %%a in (*%fileName%) do if /i "%%~nxa" equ "%fileName%" Set "pythonPath=%%a"
+for /r ..\code %%a in (*%fileName%) do if /i "%%~nxa" equ "%fileName%" Set "pythonPath=%%a"
+if "%pythonPath%" neq "" (
+    Color 07
+    "%pythonPath%" "%~dp0pteredor.py"
+    Title CMD
+    Goto End
+) else (
+    Color 04
+    echo 找不到 %filename% 文件 !!!&echo.&Pause
+    Title CMD
+    Goto Start
+)
+
+:RestTeredo
+echo 正在恢复默认 Teredo 服务器，请稍后。。。
+netsh interface teredo set state enterpriseclient server=default
+Goto End
+
+:Ipv6FailProc
+echo 正在处理 IPv6 状态 Fail，请稍后。。。
+echo.&echo ① 先禁用上网网卡
+:: control ncpa.cpl
+control netconnections
+echo.&echo ② 然后再启用上网网卡后，按任意键继续
+Pause>nul
+echo.&echo ③ 正在重启 IPv6 服务，请稍后。。。
+sc config iphlpsvc start= auto 1>nul 2>nul
+if exist %WINDIR%\System32\choice.exe (choice /t 1 /d y /n >nul) else (ping 127.1 -n 2 >nul)
+sc query iphlpsvc | %WINDIR%\System32\findstr "STOPPED" 1>nul 2>nul
+if '%ERRORLEVEL%' == '0' (
+    sc start iphlpsvc 1>nul 2>nul
+) else (
+    sc stop iphlpsvc 1>nul 2>nul
+    if exist %WINDIR%\System32\choice.exe (choice /t 1 /d y /n >nul) else (ping 127.1 -n 2 >nul)
+    sc start iphlpsvc 1>nul 2>nul
+)
 Goto End
 
 :End

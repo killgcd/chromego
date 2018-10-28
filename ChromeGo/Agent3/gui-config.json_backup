@@ -1,41 +1,8 @@
 {
 	"configs" : [
+
 		{
-			"remarks" : "2018.6.2",
-			"id" : "673D7C51CBACBF9E5E848C9BDC08B484",
-			"server" : "38.141.44.99",
-			"server_port" : 8080,
-			"server_udp_port" : 0,
-			"password" : "dongtaiwang.com",
-			"method" : "aes-256-cfb",
-			"protocol" : "auth_sha1_v4",
-			"protocolparam" : "",
-			"obfs" : "plain",
-			"obfsparam" : "",
-			"remarks_base64" : "dXBkYXRlXzIwMTguNC4yOA",
-			"group" : "alvin9999",
-			"enable" : true,
-			"udp_over_tcp" : false
-		},
-		{
-			"remarks" : "2018.6.2",
-			"id" : "49CCE340A57070737747CA04F2BD2DF5",
-			"server" : "103.114.160.41",
-			"server_port" : 8080,
-			"server_udp_port" : 0,
-			"password" : "ntdtv.com",
-			"method" : "aes-256-cfb",
-			"protocol" : "auth_sha1_v4",
-			"protocolparam" : "",
-			"obfs" : "plain",
-			"obfsparam" : "",
-			"remarks_base64" : "dXBkYXRlXzIwMTguNC4yOA",
-			"group" : "alvin9999",
-			"enable" : true,
-			"udp_over_tcp" : false
-		},
-		{
-			"remarks" : "2018.6.2",
+			"remarks" : "",
 			"id" : "7FE10FCA1C9DB0715577EF0A57C4319A",
 			"server" : "64.32.5.186",
 			"server_port" : 80,
@@ -51,15 +18,34 @@
 			"enable" : true,
 			"udp_over_tcp" : false
 		},
+		
 		{
-			"remarks" : "2018.6.2",
+			"remarks" : "",
 			"id" : "7FE10FCA1C9DB0715577EF0A57C4319A",
-			"server" : "64.32.5.181",
-			"server_port" : 789,
+			"server" : "103.114.162.108",
+			"server_port" : 888,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "aes-256-cfb",
 			"protocol" : "auth_sha1_v4",
+			"protocolparam" : "",
+			"obfs" : "plain",
+			"obfsparam" : "",
+			"remarks_base64" : "dXBkYXRlXzIwMTguNC4yOA",
+			"group" : "alvin9999",
+			"enable" : true,
+			"udp_over_tcp" : false
+		},
+		
+		{
+			"remarks" : "",
+			"id" : "7FE10FCA1C9DB0715577EF0A57C4319A",
+			"server" : "103.114.161.16",
+			"server_port" : 9999,
+			"server_udp_port" : 0,
+			"password" : "ntdtv.com",
+			"method" : "aes-256-cfb",
+			"protocol" : "origin",
 			"protocolparam" : "",
 			"obfs" : "plain",
 			"obfsparam" : "",

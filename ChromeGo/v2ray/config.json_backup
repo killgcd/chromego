@@ -20,11 +20,11 @@
       {
        "alterId": 100, 
        "security": "aes-128-gcm", 
-       "id": "d09cf4f4-434e-11e8-9bc6-003048d380c6"
+       "id": "bb5213d7-4ec7-4459-8f5f-e35f5a5f44fd"
       }
      ], 
-     "port": 8080, 
-     "address": "162.245.239.154"
+     "port": 34285, 
+     "address": "103.124.104.42"
     }
    ]
   }

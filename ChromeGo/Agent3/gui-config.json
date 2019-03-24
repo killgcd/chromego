@@ -2,9 +2,8 @@
 	"configs" : [
 		{
 			"remarks" : "",
-			"id" : "B099AD2C0D1FB020037E5491C07F1992",
 			"server" : "103.114.162.109",
-			"server_port" : 888,
+			"server_port" : 12345,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "aes-256-cfb",
@@ -12,16 +11,14 @@
 			"protocolparam" : "",
 			"obfs" : "plain",
 			"obfsparam" : "",
-			"remarks_base64" : "",
 			"group" : "alvin9999",
 			"enable" : true,
 			"udp_over_tcp" : false
 		},
 		{
 			"remarks" : "",
-			"id" : "B099AD2C0D1FB020037E5491C07F1992",
 			"server" : "103.124.105.211",
-			"server_port" : 80,
+			"server_port" : 34567,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "aes-256-cfb",
@@ -29,28 +26,10 @@
 			"protocolparam" : "",
 			"obfs" : "plain",
 			"obfsparam" : "",
-			"remarks_base64" : "",
 			"group" : "alvin9999",
 			"enable" : true,
 			"udp_over_tcp" : false
 		},
-		{
-			"remarks" : "",
-			"id" : "0247AA994E21B72D6544530668B00850",
-			"server" : "103.114.161.16",
-			"server_port" : 9999,
-			"server_udp_port" : 0,
-			"password" : "ntdtv.com",
-			"method" : "aes-256-cfb",
-			"protocol" : "origin",
-			"protocolparam" : "",
-			"obfs" : "plain",
-			"obfsparam" : "",
-			"remarks_base64" : "",
-			"group" : "alvin9999",
-			"enable" : true,
-			"udp_over_tcp" : false
-		}
 
 	],
 	"index" : 0,

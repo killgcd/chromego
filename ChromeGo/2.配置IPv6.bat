@@ -94,8 +94,7 @@ netsh int ipv6 reset
 netsh int teredo set state default
 netsh int 6to4 set state default
 netsh int isatap set state default
-:: netsh int teredo set state server=teredo.remlab.net.
-netsh int teredo set state server=win10.ipv6.microsoft.com.
+netsh int teredo set state server=teredo.remlab.net.
 netsh int ipv6 set teredo enterpriseclient
 netsh int ter set state enterpriseclient
 route delete ::/0
@@ -109,8 +108,7 @@ reg add HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters /v DisabledComp
 netsh int teredo set state default
 netsh int 6to4 set state default
 netsh int isatap set state default
-:: netsh int teredo set state server=teredo.remlab.net.
-netsh int teredo set state server=win10.ipv6.microsoft.com.
+netsh int teredo set state server=teredo.remlab.net.
 netsh int ipv6 set teredo enterpriseclient
 netsh int ter set state enterpriseclient
 route delete ::/0
@@ -154,20 +152,9 @@ MODE con: Cols=45 Lines=27
 Set tle2=手动设置 Teredo 服务器
 Set var2=0
 Set manu1=teredo.remlab.net
-Set manu2=teredo2.remlab.net
-Set manu3=teredo-debian.remlab.net
-Set manu4=teredo.trex.fi
-Set manu5=teredo.iks-jena.de
-Set manu6=win10.ipv6.microsoft.com
-Set manu7=win1710.ipv6.microsoft.com
-Set manu8=win1711.ipv6.microsoft.com
-:: Set manu9=teredo.ginzado.ne.jp
-:: Set manu10=debian-miredo.progsoc.org
-:: Set manu11=teredo.autotrans.consulintel.com
-:: Set manu12=teredo.ngix.ne.kr
-:: Set manu13=teredo.managemydedi.com
-:: Set manu14=teredo.ipv6.microsoft.com
-:: Set manu15=win8.ipv6.microsoft.com
+Set manu2=teredo-debian.remlab.net
+Set manu3=teredo.iks-jena.de
+
 
 :Menu2
 cls
@@ -180,30 +167,6 @@ echo       ⑵  %manu2%
 echo.
 echo       ⑶  %manu3%
 echo.
-echo       ⑷  %manu4%
-echo.
-echo       ⑸  %manu5%
-echo.
-echo       ⑹  %manu6%
-echo.
-echo       ⑺  %manu7%
-echo.
-echo       ⑻  %manu8%
-echo.
-:: echo       ⑼  %manu9%
-:: echo.
-:: echo       ⑽  %manu10%
-:: echo.
-:: echo       ⑾  %manu11%
-:: echo.
-:: echo       ⑿  %manu12%
-:: echo.
-:: echo       ⒀  %manu13%
-:: echo.
-:: echo       ⒁  %manu14%
-:: echo.
-:: echo       ⒂  %manu15%
-:: echo.
 echo       Ｂ  返回主菜单
 echo.
 echo --------------------------------------------

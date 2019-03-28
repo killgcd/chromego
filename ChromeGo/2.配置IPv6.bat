@@ -94,7 +94,7 @@ netsh int ipv6 reset
 netsh int teredo set state default
 netsh int 6to4 set state default
 netsh int isatap set state default
-netsh int teredo set state server=teredo.remlab.net.
+netsh int teredo set state server=217.17.192.217
 netsh int ipv6 set teredo enterpriseclient
 netsh int ter set state enterpriseclient
 route delete ::/0
@@ -108,7 +108,7 @@ reg add HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters /v DisabledComp
 netsh int teredo set state default
 netsh int 6to4 set state default
 netsh int isatap set state default
-netsh int teredo set state server=teredo.remlab.net.
+netsh int teredo set state server=217.17.192.217
 netsh int ipv6 set teredo enterpriseclient
 netsh int ter set state enterpriseclient
 route delete ::/0
@@ -151,9 +151,9 @@ MODE con: Cols=45 Lines=27
 :: MODE con: Cols=45 Lines=41
 Set tle2=手动设置 Teredo 服务器
 Set var2=0
-Set manu1=teredo.remlab.net
-Set manu2=teredo-debian.remlab.net
-Set manu3=teredo.iks-jena.de
+Set manu1=217.17.192.217
+Set manu2=195.140.195.140
+Set manu3=83.170.6.76
 
 
 :Menu2
@@ -161,11 +161,11 @@ cls
 echo 标题:「 %tle2% 」
 echo --------------------------------------------
 echo 菜单:
-echo       ⑴  %manu1%
+echo       ⑴  server1
 echo.
-echo       ⑵  %manu2%
+echo       ⑵  server2
 echo.
-echo       ⑶  %manu3%
+echo       ⑶  server3
 echo.
 echo       Ｂ  返回主菜单
 echo.

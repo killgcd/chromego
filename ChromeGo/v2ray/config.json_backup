@@ -1,21 +1,8 @@
 {
  "outbound": {
   "streamSettings": {
-   "network": "kcp", 
-   "kcpSettings": {
-    "uplinkCapacity": 100, 
-    "downlinkCapacity": 100, 
-    "readBufferSize": 2, 
-    "mtu": 1350, 
-    "header": {
-     "request": null, 
-     "type": "utp", 
-     "response": null
-    }, 
-    "tti": 50, 
-    "congestion": false, 
-    "writeBufferSize": 2
-   }, 
+   "network": "tcp", 
+   "kcpSettings": null, 
    "wsSettings": null, 
    "tcpSettings": null, 
    "tlsSettings": {}, 
@@ -33,10 +20,10 @@
       {
        "alterId": 100, 
        "security": "auto", 
-       "id": "b510defa-0962-11e9-a289-00163cd8ae2e"
+       "id": "6ebb0020-3829-11e9-9ba8-00163cd8ae2e"
       }
      ], 
-     "port": 34567, 
+     "port": 23456, 
      "address": "103.124.104.42"
     }
    ]

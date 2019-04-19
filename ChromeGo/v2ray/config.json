@@ -1,8 +1,21 @@
 {
  "outbound": {
   "streamSettings": {
-   "network": "tcp", 
-   "kcpSettings": null, 
+   "network": "kcp", 
+   "kcpSettings": {
+    "uplinkCapacity": 100, 
+    "downlinkCapacity": 100, 
+    "readBufferSize": 2, 
+    "mtu": 1350, 
+    "header": {
+     "request": null, 
+     "type": "none", 
+     "response": null
+    }, 
+    "tti": 50, 
+    "congestion": false, 
+    "writeBufferSize": 2
+   }, 
    "wsSettings": null, 
    "tcpSettings": null, 
    "tlsSettings": {}, 
@@ -19,11 +32,11 @@
      "users": [
       {
        "alterId": 100, 
-       "security": "auto", 
-       "id": "6ebb0020-3829-11e9-9ba8-00163cd8ae2e"
+       "security": "aes-128-gcm", 
+       "id": "a5f78f6d-13c9-42e2-94f4-b1c51065ae03"
       }
      ], 
-     "port": 23456, 
+     "port": 1234, 
      "address": "103.124.104.42"
     }
    ]
@@ -89,14 +102,6 @@
      "domain": null, 
      "type": "field", 
      "port": null, 
-     "outboundTag": "direct"
-    }, 
-    {
-     "type": "chinaip", 
-     "outboundTag": "direct"
-    }, 
-    {
-     "type": "chinasites", 
      "outboundTag": "direct"
     }
    ], 

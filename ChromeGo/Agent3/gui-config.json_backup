@@ -3,7 +3,7 @@
 		{
 			"remarks" : "",
 			"server" : "103.114.162.109",
-			"server_port" : 12345,
+			"server_port" : 13456,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "aes-256-cfb",
@@ -18,7 +18,7 @@
 		{
 			"remarks" : "",
 			"server" : "103.124.105.211",
-			"server_port" : 34567,
+			"server_port" : 23789,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "aes-256-cfb",

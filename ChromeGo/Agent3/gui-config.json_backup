@@ -2,23 +2,8 @@
 	"configs" : [
 		{
 			"remarks" : "",
-			"server" : "103.114.162.109",
-			"server_port" : 13456,
-			"server_udp_port" : 0,
-			"password" : "dongtaiwang.com",
-			"method" : "aes-256-cfb",
-			"protocol" : "origin",
-			"protocolparam" : "",
-			"obfs" : "plain",
-			"obfsparam" : "",
-			"group" : "alvin9999",
-			"enable" : true,
-			"udp_over_tcp" : false
-		},
-		{
-			"remarks" : "",
-			"server" : "103.124.105.211",
-			"server_port" : 23789,
+			"server" : "38.141.44.50",
+			"server_port" : 22222,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "aes-256-cfb",

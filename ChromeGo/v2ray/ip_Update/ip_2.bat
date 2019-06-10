@@ -1,9 +1,9 @@
 @Echo Off
-Title ´ÓGitHubÔÆ¶Ë¸üÐÂ v2ray ×îÐÂ¿ÉÓÃ IP
+Title ´ÓCODÔÆ¶Ë¸üGÂ v2ray ×îGÂ¿ÉÓÃ IP or ÅäÖÃ
 cd /d %~dp0
-..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/pac/git/raw/master/config.json
-del "..\config.json_backup"
-ren "..\config.json"  config.json_backup
-copy /y "%~dp0config.json" ..\config.json
-del "%~dp0config.json"
-ECHO.&ECHO.ÒÑ¸üÐÂÍê³É×îÐÂ¿ÉÓÃv2rayÅäÖÃ,Çë°´ÈÎÒâ¼üÍË³ö,²¢ÖØÆô³ÌÐò. &PAUSE >NUL 2>NUL
+..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/pac/git/raw/master/guiNConfig.json
+del "..\guiNConfig.json_backup"
+ren "..\guiNConfig.json"  guiNConfig.json_backup
+copy /y "%~dp0guiNConfig.json" ..\guiNConfig.json
+del "%~dp0guiNConfig.json"
+ECHO.&ECHO.ÒÑ¸üGÂÍê³É×îGÂ¿ÉÓÃv2rayÅäÖÃ,Çë°´ÈÎÒâ¼üÍË³ö,²¢ÖØÆô³ÌGò. &PAUSE >NUL 2>NUL

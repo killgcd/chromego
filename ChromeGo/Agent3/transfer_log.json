@@ -198,5 +198,9 @@
 	"38.141.44.99" : {
 		"totalUploadBytes" : 3234,
 		"totalDownloadBytes" : 5808
+	},
+	"38.100.228.91" : {
+		"totalUploadBytes" : 38951,
+		"totalDownloadBytes" : 332910
 	}
 }

@@ -2,8 +2,8 @@
 	"configs" : [
 		{
 			"remarks" : "",
-			"server" : "38.141.44.50",
-			"server_port" : 22222,
+			"server" : "38.100.228.91",
+			"server_port" : 443,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "aes-256-cfb",

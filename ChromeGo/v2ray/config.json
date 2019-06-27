@@ -32,7 +32,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "free6666.tk",
+            "address": "www.free9999.org",
             "port": 443,
             "users": [
               {
@@ -52,7 +52,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": true,
-          "serverName": "free6666.tk"
+          "serverName": "www.free9999.org"
         },
         "tcpSettings": null,
         "kcpSettings": null,
@@ -60,7 +60,7 @@
           "connectionReuse": true,
           "path": "/",
           "headers": {
-            "Host": "free6666.tk"
+            "Host": "www.free9999.org"
           }
         },
         "httpSettings": null,

@@ -5,7 +5,7 @@
     "remote_addr": "www.free9999.net",
     "remote_port": 443,
     "password": [
-        "freedom"
+        "abc123"
     ],
     "append_payload": true,
     "log_level": 1,

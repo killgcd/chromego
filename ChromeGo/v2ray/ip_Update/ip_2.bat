@@ -7,3 +7,4 @@ ren "..\guiNConfig.json"  guiNConfig.json_backup
 copy /y "%~dp0guiNConfig.json" ..\guiNConfig.json
 del "%~dp0guiNConfig.json"
 ECHO.&ECHO.ÒÑ¸üGÂÍê³É×îGÂ¿ÉÓÃv2rayÅäÖÃ,Çë°´ÈÎÒâ¼üÍË³ö,²¢ÖØÆô³ÌGò. &PAUSE >NUL 2>NUL
+exit

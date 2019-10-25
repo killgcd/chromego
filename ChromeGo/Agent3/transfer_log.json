@@ -206,5 +206,9 @@
 	"162.245.239.66" : {
 		"totalUploadBytes" : 78082,
 		"totalDownloadBytes" : 565208
+	},
+	"162.245.239.67" : {
+		"totalUploadBytes" : 104731,
+		"totalDownloadBytes" : 906183
 	}
 }

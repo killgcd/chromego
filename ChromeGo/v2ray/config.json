@@ -10,7 +10,7 @@
       "listen": "127.0.0.1",
       "protocol": "socks",
       "sniffing": {
-        "enabled": true,
+        "enabled": false,
         "destOverride": [
           "http",
           "tls"
@@ -18,7 +18,7 @@
       },
       "settings": {
         "auth": "noauth",
-        "udp": true,
+        "udp": false,
         "ip": null,
         "clients": null
       },
@@ -32,14 +32,14 @@
       "settings": {
         "vnext": [
           {
-            "address": "www.free9999.org",
-            "port": 443,
+            "address": "216.244.76.219",
+            "port": 54321,
             "users": [
               {
-                "id": "64e14610-c6f7-41b2-896d-fe19e3f14020",
-                "alterId": 233,
+                "id": "3cf35a68-ea46-11e9-9cab-003048d37a3c",
+                "alterId": 64,
                 "email": "t@t.tt",
-                "security": "auto"
+                "security": "aes-128-gcm"
               }
             ]
           }
@@ -48,21 +48,12 @@
         "response": null
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "www.free9999.org"
-        },
+        "network": "tcp",
+        "security": "",
+        "tlsSettings": null,
         "tcpSettings": null,
         "kcpSettings": null,
-        "wsSettings": {
-          "connectionReuse": true,
-          "path": "/",
-          "headers": {
-            "Host": "www.free9999.org"
-          }
-        },
+        "wsSettings": null,
         "httpSettings": null,
         "quicSettings": null
       },

@@ -7,3 +7,4 @@ ren "..\guiNConfig.json"  guiNConfig.json_backup
 copy /y "%~dp0guiNConfig.json" ..\guiNConfig.json
 del "%~dp0guiNConfig.json"
 ECHO.&ECHO.已更新完成最新可用v2ray配置,请按任意键退出,并重启程序. &PAUSE >NUL 2>NUL
+exit

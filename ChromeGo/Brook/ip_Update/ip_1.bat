@@ -7,3 +7,4 @@ ren "..\config.ini"  config.ini_backup
 copy /y "%~dp0config.ini" ..\config.ini
 del "%~dp0config.ini"
 ECHO.&ECHO.已更新完成最新可用brook配置,请按任意键退出,并重启程序. &PAUSE >NUL 2>NUL
+exit

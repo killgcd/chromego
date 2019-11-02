@@ -1,6 +1,9 @@
 # chromego
 ChromeGo 翻墙工具包
 
+<b>推荐：</b><br>
+<a href="https://github.com/killgcd/justmysocks/blob/master/README.md"><img src="https://raw.githubusercontent.com/killgcd/justmysocks/master/images/bwgss.jpg" alt="搬瓦工翻墙 Just My Socks"></a>
+
 <b>下载本项目</b><br>
 <img src="https://github.com/killgcd/chromego/blob/master/%E4%B8%8B%E8%BD%BDchromego.jpg?raw=true" alt="下载chromego.jpg">
 

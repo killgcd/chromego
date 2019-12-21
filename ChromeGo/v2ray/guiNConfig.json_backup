@@ -3,8 +3,8 @@
     {
       "localPort": 10808,
       "protocol": "socks",
-      "udpEnabled": true,
-      "sniffingEnabled": true
+      "udpEnabled": false,
+      "sniffingEnabled": false
     }
   ],
   "logEnabled": false,
@@ -13,17 +13,17 @@
   "vmess": [
     {
       "configVersion": 2,
-      "address": "www.free9999.org",
-      "port": 443,
-      "id": "64e14610-c6f7-41b2-896d-fe19e3f14020",
-      "alterId": 233,
-      "security": "auto",
-      "network": "ws",
-      "remarks": "233v2.com_www.free9999.org",
+      "address": "216.244.76.219",
+      "port": 54321,
+      "id": "3cf35a68-ea46-11e9-9cab-003048d37a3c",
+      "alterId": 64,
+      "security": "aes-128-gcm",
+      "network": "tcp",
+      "remarks": "free",
       "headerType": "none",
-      "requestHost": "www.free9999.org",
-      "path": "/",
-      "streamSecurity": "tls",
+      "requestHost": "",
+      "path": "",
+      "streamSecurity": "",
       "allowInsecure": "",
       "configType": 1,
       "testResult": "",

@@ -1,7 +1,0 @@
-language: zh_CN
-modules:
-  gae_proxy: {auto_start: 1}
-  launcher: {allow_remote_connect: 0, control_port: 8085, last_run_version: 3.13.1,
-    popup_webui: 0, proxy: disable, show_systray: 1}
-  smart_router: {auto_start: 1}
-  x_tunnel: {auto_start: 0}

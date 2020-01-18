@@ -3,9 +3,9 @@
 		{
 			"remarks" : "",
 			"server" : "162.245.239.67",
-			"server_port" : 34568,
+			"server_port" : 29,
 			"server_udp_port" : 0,
-			"password" : "dongtaiwang.com",
+			"password" : "ntdtv.com",
 			"method" : "aes-256-cfb",
 			"protocol" : "origin",
 			"protocolparam" : "",

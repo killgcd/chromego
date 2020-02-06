@@ -1,7 +1,7 @@
 @Echo Off
 Title 从GitHub云端更新 v2ray 最新可用 IP
 cd /d %~dp0
-..\..\wget --ca-certificate=ca-bundle.crt -c https://raw.githubusercontent.com/Alvin9999/PAC/master/guiNConfig.json
+..\..\wget --ca-certificate=ca-bundle.crt -c https://cdn.jsdelivr.net/gh/Alvin9999/PAC/guiNConfig.json
 del "..\guiNConfig.json_backup"
 ren "..\guiNConfig.json"  guiNConfig.json_backup
 copy /y "%~dp0guiNConfig.json" ..\guiNConfig.json

@@ -1,14 +1,14 @@
 @Echo Off
 Title 从GitHub云端更新 Trojan 最新配置
 cd /d %~dp0
-..\..\wget --ca-certificate=ca-bundle.crt -c https://cdn.jsdelivr.net/gh/Alvin9999/pac2/config.json
+..\..\wget --ca-certificate=ca-bundle.crt -c https://gitlab.com/free9999/ipupdate/-/raw/master/trojan/config.json
 del "..\config.json_backup"
 ren "..\config.json"  config.json_backup
 copy /y "%~dp0config.json" ..\config.json
 del "%~dp0config.json"
 ECHO.&ECHO.已更新IP配置信息～接下来更新证书文件～
 
-..\..\wget --ca-certificate=ca-bundle.crt -c https://cdn.jsdelivr.net/gh/Alvin9999/pac2/crt/private.crt
+..\..\wget --ca-certificate=ca-bundle.crt -c https://gitlab.com/free9999/ipupdate/-/raw/master/trojan/private.crt
 del "..\private.crt_backup"
 ren "..\private.crt"  private.crt_backup
 copy /y "%~dp0private.crt" ..\private.crt

@@ -1,7 +1,7 @@
 @Echo Off
 Title 从GitHub云端更新 SS 配置文件
 cd /d %~dp0
-..\..\wget --ca-certificate=ca-bundle.crt -c https://cdn.jsdelivr.net/gh/Alvin9999/pac2/ssconfig.txt
+..\..\wget --ca-certificate=ca-bundle.crt -c https://gitlab.com/free9999/ipupdate/-/raw/master/ssr/ssconfig.txt
 del "..\gui-config.json_backup"
 ren "..\gui-config.json"  gui-config.json_backup
 certutil -decode %~dp0ssconfig.txt %~dp0gui-config.json

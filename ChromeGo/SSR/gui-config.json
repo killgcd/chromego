@@ -2,27 +2,28 @@
 	"configs" : [
 		{
 			"remarks" : "",
+			"id" : "D995AEE647FECEC24D767CFE391140BF",
 			"server" : "216.176.190.10",
-			"server_port" : 19,
+			"server_port" : 54321,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "aes-256-cfb",
-			"protocol" : "origin",
+			"protocol" : "auth_sha1_v4",
 			"protocolparam" : "",
 			"obfs" : "plain",
 			"obfsparam" : "",
+			"remarks_base64" : "",
 			"group" : "alvin9999",
 			"enable" : true,
 			"udp_over_tcp" : false
-		},
-
+		}
 	],
 	"index" : 0,
 	"random" : true,
 	"sysProxyMode" : 0,
 	"shareOverLan" : false,
 	"localPort" : 1080,
-	"localAuthPassword" : null,
+	"localAuthPassword" : "SyUNWU7xAXf_GpuMPeEL",
 	"dnsServer" : "",
 	"reconnectTimes" : 2,
 	"randomAlgorithm" : 3,

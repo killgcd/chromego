@@ -1,12 +1,19 @@
 @Echo Off
-Title ´ÓGitHubÔÆ¶Ë¸üÐÂ SS ÅäÖÃÎÄ¼þ
+Title ä»ŽGitHubäº‘ç«¯æ›´æ–° SS é…ç½®æ–‡ä»¶
 cd /d %~dp0
 ..\..\wget --ca-certificate=ca-bundle.crt -c https://gitlab.com/free9999/ipupdate/-/raw/master/ssr/ssconfig.txt
+
+if exist ssconfig.txt goto startcopy
+echo ipæ›´æ–°å¤±è´¥ï¼Œè¯·è¯•è¯•ip_2æ›´æ–°
+pause
+exit
+:startcopy
+
 del "..\gui-config.json_backup"
 ren "..\gui-config.json"  gui-config.json_backup
 certutil -decode %~dp0ssconfig.txt %~dp0gui-config.json
 copy /y "%~dp0gui-config.json" ..\gui-config.json
 del "%~dp0ssconfig.txt"
 del "%~dp0gui-config.json"
-ECHO.&ECHO.ÒÑ¸üÐÂSSRÅäÖÃÎÄ¼þ,Çë°´ÈÎÒâ¼üÍË³ö,²¢ÖØÆô³ÌÐò. &PAUSE >NUL 2>NUL
+ECHO.&ECHO.å·²æ›´æ–°SSRé…ç½®æ–‡ä»¶,è¯·æŒ‰ä»»æ„é”®é€€å‡º,å¹¶é‡å¯ç¨‹åº. &PAUSE >NUL 2>NUL
 exit

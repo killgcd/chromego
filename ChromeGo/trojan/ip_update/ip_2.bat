@@ -1,19 +1,26 @@
 @Echo Off
-Title ´ÓCoding.netÔÆ¶Ë¸üÐÂ Trojan ×îÐÂÅäÖÃ
+Title ä»ŽCoding.netäº‘ç«¯æ›´æ–° Trojan æœ€æ–°é…ç½®
 cd /d %~dp0
 ..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/ip/git/raw/master/config.json
+..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/ip/git/raw/master/private.crt
+
+if exist config.json goto startcopy
+echo ipæ›´æ–°å¤±è´¥ï¼Œè¯·è¯•è¯•ip_1æ›´æ–°
+pause
+exit
+:startcopy
+
 del "..\config.json_backup"
 ren "..\config.json"  config.json_backup
 copy /y "%~dp0config.json" ..\config.json
 del "%~dp0config.json"
-ECHO.&ECHO.ÒÑ¸üÐÂIPÅäÖÃÐÅÏ¢¡«½ÓÏÂÀ´¸üÐÂÖ¤ÊéÎÄ¼þ¡«
+ECHO.&ECHO.å·²æ›´æ–°IPé…ç½®ä¿¡æ¯ï½žæŽ¥ä¸‹æ¥æ›´æ–°è¯ä¹¦æ–‡ä»¶ï½ž
 
-..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/ip/git/raw/master/private.crt
 del "..\private.crt_backup"
 ren "..\private.crt"  private.crt_backup
 copy /y "%~dp0private.crt" ..\private.crt
 del "%~dp0private.crt"
-ECHO.&ECHO.ÒÑ¸üÐÂÖ¤ÊéÎÄ¼þ¡«
+ECHO.&ECHO.å·²æ›´æ–°è¯ä¹¦æ–‡ä»¶ï½ž
 
-ECHO.&ECHO.ÒÑ¸üÐÂÍê³É×îÐÂ¿ÉÓÃtrojanÅäÖÃ,Çë°´ÈÎÒâ¼üÍË³ö,²¢ÖØÆô³ÌÐò. &PAUSE >NUL 2>NUL
+ECHO.&ECHO.å·²æ›´æ–°å®Œæˆæœ€æ–°å¯ç”¨trojané…ç½®,è¯·æŒ‰ä»»æ„é”®é€€å‡º,å¹¶é‡å¯ç¨‹åº. &PAUSE >NUL 2>NUL
 exit

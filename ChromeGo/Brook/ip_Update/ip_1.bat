@@ -1,10 +1,17 @@
 @Echo Off
-Title ´ÓGitHubÔÆ¶Ë¸üÐÂ brook ×îÐÂÅäÖÃ
+Title ä»ŽGitHubäº‘ç«¯æ›´æ–° brook æœ€æ–°é…ç½®
 cd /d %~dp0
 ..\..\wget --ca-certificate=ca-bundle.crt -c https://gitlab.com/free9999/ipupdate/-/raw/master/brook/config.ini
+
+if exist config.ini goto startcopy
+echo ipæ›´æ–°å¤±è´¥ï¼Œè¯·è¯•è¯•ip_2æ›´æ–°
+pause
+exit
+:startcopy
+
 del "..\config.ini_backup"
 ren "..\config.ini"  config.ini_backup
 copy /y "%~dp0config.ini" ..\config.ini
 del "%~dp0config.ini"
-ECHO.&ECHO.ÒÑ¸üÐÂÍê³É×îÐÂ¿ÉÓÃbrookÅäÖÃ,Çë°´ÈÎÒâ¼üÍË³ö,²¢ÖØÆô³ÌÐò. &PAUSE >NUL 2>NUL
+ECHO.&ECHO.å·²æ›´æ–°å®Œæˆæœ€æ–°å¯ç”¨brooké…ç½®,è¯·æŒ‰ä»»æ„é”®é€€å‡º,å¹¶é‡å¯ç¨‹åº. &PAUSE >NUL 2>NUL
 exit

@@ -1,10 +1,10 @@
 @Echo Off
-Title ä»Žäº‘ç«¯æ›´æ–° v2ray æœ€æ–°å¯ç”¨ IP
+Title ´ÓÔÆ¶Ë¸üÐÂ v2ray ×îÐÂ¿ÉÓÃ IP
 cd /d %~dp0
 ..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/pac/git/raw/master/guiNConfig.json
 
 if exist guiNConfig.json goto startcopy
-echo ipæ›´æ–°å¤±è´¥ï¼Œè¯·è¯•è¯•ip_1æ›´æ–°
+echo ip¸üÐÂÊ§°Ü£¬ÇëÊÔÊÔip_1¸üÐÂ
 pause
 exit
 :startcopy
@@ -13,5 +13,6 @@ del "..\guiNConfig.json_backup"
 ren "..\guiNConfig.json"  guiNConfig.json_backup
 copy /y "%~dp0guiNConfig.json" ..\guiNConfig.json
 del "%~dp0guiNConfig.json"
-ECHO.&ECHO.å·²æ›´æ–°å®Œæˆæœ€æ–°å¯ç”¨v2rayé…ç½®,è¯·æŒ‰ä»»æ„é”®é€€å‡º,å¹¶é‡å¯ç¨‹åº. &PAUSE >NUL 2>NUL
+ECHO update ok. 
+PAUSE
 exit

@@ -1,10 +1,10 @@
 @Echo Off
-Title ä»ŽCODäº‘ç«¯æ›´æ–° Goflyway æœ€æ–°é…ç½®
+Title ´ÓCODÔÆ¶Ë¸üÐÂ Goflyway ×îÐÂÅäÖÃ
 cd /d %~dp0
 ..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/ip/git/raw/master/config.ini
 
 if exist config.ini goto startcopy
-echo ipæ›´æ–°å¤±è´¥ï¼Œè¯·è¯•è¯•ip_1æ›´æ–°
+echo ip¸üÐÂÊ§°Ü£¬ÇëÊÔÊÔip_1¸üÐÂ
 pause
 exit
 :startcopy
@@ -13,5 +13,5 @@ del "..\config.ini_backup"
 ren "..\config.ini"  config.ini_backup
 copy /y "%~dp0config.ini" ..\config.ini
 del "%~dp0config.ini"
-ECHO.&ECHO.å·²æ›´æ–°å®Œæˆæœ€æ–°å¯ç”¨Goflywayé…ç½®,è¯·æŒ‰ä»»æ„é”®é€€å‡º,å¹¶é‡å¯ç¨‹åº. &PAUSE >NUL 2>NUL
+ECHO.&ECHO.ÒÑ¸üÐÂÍê³É×îÐÂ¿ÉÓÃGoflywayÅäÖÃ,Çë°´ÈÎÒâ¼üÍË³ö,²¢ÖØÆô³ÌÐò. &PAUSE >NUL 2>NUL
 exit

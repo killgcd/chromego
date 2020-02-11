@@ -1,10 +1,10 @@
 @Echo Off
-Title ä»ŽGitHubäº‘ç«¯æ›´æ–° Lightsocks æœ€æ–°é…ç½®
+Title ´ÓGitHubÔÆ¶Ë¸üÐÂ Lightsocks ×îÐÂÅäÖÃ
 cd /d %~dp0
 ..\..\wget --ca-certificate=ca-bundle.crt -c https://cdn.jsdelivr.net/gh/Alvin9999/PAC/lightsocks/config.ini
 
 if exist config.ini goto startcopy
-echo ipæ›´æ–°å¤±è´¥ï¼Œè¯·è¯•è¯•ip_2æ›´æ–°
+echo ip¸üÐÂÊ§°Ü£¬ÇëÊÔÊÔip_2¸üÐÂ
 pause
 exit
 :startcopy
@@ -13,5 +13,5 @@ del "..\config.ini_backup"
 ren "..\config.ini"  config.ini_backup
 copy /y "%~dp0config.ini" ..\config.ini
 del "%~dp0config.ini"
-ECHO.&ECHO.å·²æ›´æ–°å®Œæˆæœ€æ–°å¯ç”¨Lightsocksé…ç½®,è¯·æŒ‰ä»»æ„é”®é€€å‡º,å¹¶é‡å¯ç¨‹åº. &PAUSE >NUL 2>NUL
+ECHO.&ECHO.ÒÑ¸üÐÂÍê³É×îÐÂ¿ÉÓÃLightsocksÅäÖÃ,Çë°´ÈÎÒâ¼üÍË³ö,²¢ÖØÆô³ÌÐò. &PAUSE >NUL 2>NUL
 exit

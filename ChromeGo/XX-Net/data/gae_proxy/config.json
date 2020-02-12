@@ -4732,5 +4732,25 @@
     "323.xhaiopbc-0024", 
     "323.zdaiopbc-0022"
   ], 
-  "use_ipv6": "force_ipv4"
+  "use_ipv6": "force_ipv4",
+  	
+	  "ForceGAE": [
+		"appengine.google.com",
+		"books.google.com",
+		"business.google.com",
+		"clients1.google.com",
+		"clients2.google.com",
+		"clients3.google.com",
+		"clients4.google.com",
+		"domains.google.com",
+		"plus.google.com/$",
+		"tools.google.com",
+		"www.google.com/maps",
+		"www.google.com/patents",
+		"accounts.google.com/patents",
+		"mail.google.com/patents",
+		"youtube.googleapis.com",
+		".youtube.com"
+		]
+   
 }

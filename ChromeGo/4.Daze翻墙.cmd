@@ -8,7 +8,7 @@ if errorlevel 2 goto startfq
 if errorlevel 1 goto ip1
 
 :ip1
-start /wait "" "%~dp0DAZE\ip_Update\ip.bat"
+start /wait "" "%~dp0DAZE\ip_Update\ip_1.bat"
 goto startfq
 
 :startfq

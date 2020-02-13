@@ -1,7 +1,14 @@
 @Echo Off
 Title 从GitHub云端更新 Lightsocks 最新配置
 cd /d %~dp0
-..\..\wget --ca-certificate=ca-bundle.crt -c https://cdn.jsdelivr.net/gh/Alvin9999/PAC/lightsocks/config.ini
+..\..\wget --ca-certificate=ca-bundle.crt -c https://killgcd.github.io/chromego/ChromeGo/Lightsocks/config.ini
+
+if exist config.ini goto startcopy
+echo ip更新失败，请试试ip_2更新
+pause
+exit
+:startcopy
+
 del "..\config.ini_backup"
 ren "..\config.ini"  config.ini_backup
 copy /y "%~dp0config.ini" ..\config.ini

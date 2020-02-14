@@ -1,7 +1,7 @@
 @Echo Off
 Title 从COD云端更新 Goflyway 最新配置
 cd /d %~dp0
-..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/ip/git/raw/master/config.ini
+..\..\wget --ca-certificate=ca-bundle.crt -c https://cdn.jsdelivr.net/gh/Alvin9999/pac2@latest/config.ini
 
 if exist config.ini goto startcopy
 echo ip更新失败，请试试ip_1更新

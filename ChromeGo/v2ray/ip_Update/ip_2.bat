@@ -1,7 +1,7 @@
 @Echo Off
 Title 从云端更新 v2ray 最新可用 IP
 cd /d %~dp0
-..\..\wget --ca-certificate=ca-bundle.crt -c https://coding.net/u/Alvin9999/p/pac/git/raw/master/guiNConfig.json
+..\..\wget --ca-certificate=ca-bundle.crt -c https://cdn.jsdelivr.net/gh/Alvin9999/PAC@latest/guiNConfig.json
 
 if exist guiNConfig.json goto startcopy
 echo ip更新失败，请试试ip_1更新

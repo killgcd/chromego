@@ -10,7 +10,7 @@ if exist %filename% goto startcopy
 
 set filename=config.ini
 echo download ip1 failed,try download ip2 ...
-..\..\wget -t 1 --ca-certificate=ca-bundle.crt https://coding.net/u/Alvin9999/p/pac/git/raw/master/DAZE/config.ini
+..\..\wget -t 1 --ca-certificate=ca-bundle.crt https://cdn.jsdelivr.net/gh/Alvin9999/PAC@latest/DAZE/config.ini
 if exist %filename% goto startcopy
 
 rem 2次下载都失败，则提示用户反馈并退出

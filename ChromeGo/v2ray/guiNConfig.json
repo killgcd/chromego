@@ -14,7 +14,7 @@
     {
       "configVersion": 2,
       "address": "45.89.197.71",
-      "port": 35112,
+      "port": 96,
       "id": "68c55e2a-4c57-11ea-a3b8-00163cf6b93a",
       "alterId": 2,
       "security": "aes-128-gcm",

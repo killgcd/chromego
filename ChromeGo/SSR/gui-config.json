@@ -4,7 +4,7 @@
 			"remarks" : "",
 			"id" : "D995AEE647FECEC24D767CFE391140BF",
 			"server" : "216.176.190.10",
-			"server_port" : 54321,
+			"server_port" : 8080,
 			"server_udp_port" : 0,
 			"password" : "dongtaiwang.com",
 			"method" : "rc4",

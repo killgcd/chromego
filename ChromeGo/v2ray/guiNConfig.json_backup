@@ -13,12 +13,12 @@
   "vmess": [
     {
       "configVersion": 2,
-      "address": "45.89.197.71",
-      "port": 96,
-      "id": "68c55e2a-4c57-11ea-a3b8-00163cf6b93a",
-      "alterId": 2,
-      "security": "aes-128-gcm",
-      "network": "tcp",
+      "address": "216.244.76.218",
+      "port": 12340,
+      "id": "6ac6bf90-50ba-11ea-af83-003048d37a3c",
+      "alterId": 23,
+      "security": "auto",
+      "network": "ws",
       "remarks": "https://github.com/Alvin9999/new-pac/wiki",
       "headerType": "none",
       "requestHost": "",

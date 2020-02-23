@@ -1,0 +1,4 @@
+.gradle/
+.externalNativeBuild/
+.idea/
+ChromeGo/update.cmd

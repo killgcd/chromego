@@ -1,5 +1,5 @@
 # chromego
-ChromeGo 翻墙工具包
+ChromeGo 翻墙工具包，本库停止更新，已转移到 [新地址](https://github.com/bannedbook/fanqiang) 。
 
 <b>推荐：</b><br>
 <a href="https://github.com/killgcd/justmysocks/blob/master/README.md"><img src="https://raw.githubusercontent.com/killgcd/justmysocks/master/images/bwgss.jpg" alt="搬瓦工翻墙 Just My Socks"></a>

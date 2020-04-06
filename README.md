@@ -1,5 +1,5 @@
 # chromego
-# 本库停止更新，已转移到 [新地址](https://github.com/bannedbook/fanqiang) 。
+# 本库停止更新，已转移到新地址： [ChromeGo](https://github.com/bannedbook/fanqiang) 。
 
 <h1><a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6">安卓手机翻墙</a>、<a href="https://github.com/bannedbook/fanqiang/wiki/Chrome%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99%E5%8C%85" class="wiki-page-link">Chrome一键翻墙包</a>、<a href="https://github.com/bannedbook/fanqiang/wiki/%E7%81%AB%E7%8B%90firefox%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99%E5%8C%85" class="wiki-page-link">火狐firefox一键翻墙包</a>、<a href="https://github.com/bannedbook/xxjw" class="wiki-page-link">XX-Net禁闻版</a></h1> 
 <b>广告：</b><br>

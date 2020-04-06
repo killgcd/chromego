@@ -1,5 +1,5 @@
 # chromego
-# 本库停止更新，已转移到 [新地址](https://github.com/bannedbook/fanqiang) 。
+# 本库停止更新，已转移到新地址： [ChromeGo](https://github.com/bannedbook/fanqiang) 。
 
 <h1><a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6">安卓手机翻墙</a>、<a href="https://github.com/bannedbook/fanqiang/wiki/Chrome%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99%E5%8C%85" class="wiki-page-link">Chrome一键翻墙包</a>、<a href="https://github.com/bannedbook/fanqiang/wiki/%E7%81%AB%E7%8B%90firefox%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99%E5%8C%85" class="wiki-page-link">火狐firefox一键翻墙包</a>、<a href="https://github.com/bannedbook/xxjw" class="wiki-page-link">XX-Net禁闻版</a></h1> 
 <b>广告：</b><br>
@@ -38,7 +38,6 @@
 * <a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6#ssvpn">SS VPN</a>
 * <a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6#ssrvpn">SpeedUp VPN</a>
 * <a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6#v2vpn">V2ray VPN</a>
-* <a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6#dtwapp">动网新闻APP</a>
 
 <a name="allsoft"></a><h2>自建翻墙服务器教程</h2>
 
@@ -51,13 +50,13 @@
 * [Brook之TLS+WebSocket翻墙教程](https://github.com/bannedbook/fanqiang/blob/master/v2ss/Brook%E4%B9%8BTLS%2BWebSocket%E7%BF%BB%E5%A2%99%E6%95%99%E7%A8%8B.md)
 * <a title="自建Shadowsocks服务器简明教程" href="https://github.com/bannedbook/fanqiang/blob/master/v2ss/%E8%87%AA%E5%BB%BAShadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B.md">自建Shadowsocks服务器简明教程</a>
 
-<b>本页二维码、短网址：</b> <br>
+<b>翻墙二维码、短网址：</b> <br>
 <img src="https://raw.githubusercontent.com/bannedbook/fanqiang/master/deprecated/jw/qr.jpg" /><br>
 https://git.io/jww 或 https://bit.ly/jinnews  或  https://x.co/bnews<br>
 http后一定要跟s，如果微信里直接打不开，请先点击微信右上角三个点，选择在浏览器中打开
 
 <h2>
-本页面短网址：https://git.io/jww  或  https://bit.ly/jinnews 、https://x.co/fqiang
+翻墙短网址：https://git.io/jww  或  https://bit.ly/jinnews 、https://x.co/fqiang
 </h2>
 
 <b>版权声明</b><br>

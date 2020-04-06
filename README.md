@@ -38,7 +38,6 @@
 * <a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6#ssvpn">SS VPN</a>
 * <a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6#ssrvpn">SpeedUp VPN</a>
 * <a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6#v2vpn">V2ray VPN</a>
-* <a href="https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6#dtwapp">动网新闻APP</a>
 
 <a name="allsoft"></a><h2>自建翻墙服务器教程</h2>
 
